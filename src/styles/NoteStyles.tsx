@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import { format } from "date-fns";
 
+export const CardDetail = styled.div`
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-height: 100%;
+`;
+
 export const Card = styled.div`
-  background: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
   margin: 10px;
@@ -17,12 +27,14 @@ export const Card = styled.div`
     transform: translateY(-5px);
   }
 `;
+
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
   padding: 10px;
 `;
+
 export const NoteTitle = styled.h5`
   font-size: 1.5rem;
   line-height: 1.4;
@@ -33,6 +45,7 @@ export const NoteTitle = styled.h5`
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 `;
+
 export const LinkText = styled.a`
   font-size: 1rem; /* Adjust font size as needed */
   line-height: 1.5; /* Line height for proper spacing */
@@ -60,12 +73,14 @@ export const ContentText = styled.p`
   -webkit-box-orient: vertical;
   text-overflow: ellipsis; /* Add "..." at the end of truncated text */
 `;
+
 export const ButtonContainer = styled.div`
   margin-top: auto; /* Push the button container to the bottom */
   display: flex;
   justify-content: flex-end; /* Align the button to the right */
   gap: 10px;
 `;
+
 export const TagList = styled.div`
   margin-top: 10px;
   display: flex;

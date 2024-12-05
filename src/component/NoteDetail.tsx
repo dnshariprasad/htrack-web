@@ -5,7 +5,6 @@ import { format } from "date-fns";
 import { RootState } from "../redux/store";
 import { deleteNote } from "../redux/notesSlice";
 import {
-  Card,
   NoteTitle,
   LinkText,
   ContentText,
@@ -16,6 +15,7 @@ import {
   DateTime,
   CategoryTag,
   StyledButton,
+  CardDetail,
 } from "../styles/NoteStyles"; // Import styled components
 
 const NoteDetail: React.FC = () => {
@@ -41,7 +41,7 @@ const NoteDetail: React.FC = () => {
     navigate(`/edit/${note.id}`); // Navigate to the edit screen for the note
   };
   return (
-    <Card>
+    <CardDetail>
       <Header>
         <DateTime>{format(note.createdAt, "MMM dd, yyyy hh:mm a")}</DateTime>
         <CategoryTag>{note.category}</CategoryTag>
@@ -68,7 +68,7 @@ const NoteDetail: React.FC = () => {
           Delete
         </StyledButton>
       </ButtonContainer>
-    </Card>
+    </CardDetail>
   );
 };
 

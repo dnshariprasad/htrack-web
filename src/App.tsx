@@ -3,11 +3,18 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AddNote from "./component/AddNote";
 import NoteList from "./component/NoteList";
 import NoteDetail from "./component/NoteDetail";
+import styled from "styled-components";
+
+const Navbar = styled.nav`
+  padding: 15px 80px; /* Adjust padding as needed */
+  background-color: #f8f9fa; /* Optional: Background color */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+`;
 
 const App: React.FC = () => {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Navbar className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
             HtracK
@@ -18,7 +25,7 @@ const App: React.FC = () => {
             </Link>
           </div>
         </div>
-      </nav>
+      </Navbar>
       <Routes>
         <Route path="/" element={<NoteList />} />
         <Route path="/add" element={<AddNote />} />
