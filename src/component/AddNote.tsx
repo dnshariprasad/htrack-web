@@ -106,7 +106,7 @@ const AddNote: React.FC = () => {
           />
         </div>
 
-        {category == "Link" && (
+        {category === "Link" && (
           <div className="mb-3">
             <label htmlFor="link" className="form-label">
               Link
